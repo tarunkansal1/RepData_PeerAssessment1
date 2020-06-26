@@ -6,13 +6,13 @@ output: html_document
 ---
 ### Frist we will read some data and modify dataset.  
 
-```{r echo=TRUE,results='asis'}
+```{r echo=TRUE,results='hold'}
 activity <- read.csv("activity.csv")
 activity$date <- as.Date(activity$date , "%F")
 ```
 
 ### Now we make histogram for totla number of steps each day.
-```{r}
+```{r results='hold'}
 sum <- tapply(activity$steps,activity$date,sum)
 sum <- as.data.frame(sum)
 sum$date <- as.Date(rownames(sum),"%F")

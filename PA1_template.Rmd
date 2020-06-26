@@ -6,7 +6,7 @@ output: html_document
 ---
 ### Frist we will read some data and modify dataset.  
 
-```{r echo=TRUE}
+```{r echo=TRUE,results='asis'}
 activity <- read.csv("activity.csv")
 activity$date <- as.Date(activity$date , "%F")
 ```
